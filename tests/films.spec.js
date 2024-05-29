@@ -292,51 +292,48 @@ describe('Function "orderByYear"', () => {
 
 // Exercise 6
 // YOUR CODE HERE. Test moviesAverageByCategory()
-/*describe('Function "moviesAverageByCategory"', () => {
-  it('ADD YOUR CODE IN films.spec.js file', () => {
-    expect(typeof hoursToMinutes).toBe('coffee');
-  });
-});*/
+
 describe('Function "moviesAverageByCategory"', () => {
   it('should be declared', () => {
     expect(typeof moviesAverageByCategory).toBe('function');
   });
 
   it('should return a number', () => {
-    expect(typeof moviesAverageByCategory(movies, 'Drama')).toBe('number');
+    expect(typeof moviesAverageByCategory(movies, 'Comedy')).toBe('number');
   });
 
   it('should be different from NaN', () => {
-    expect(moviesAverageByCategory(movies, 'Drama')).not.toBeNaN();
+    expect(moviesAverageByCategory(movies, 'Comedy')).not.toBeNaN();
   });
 
   it('should return the average movies scores by movies genre with 2 decimals', () => {
     expect(moviesAverageByCategory([
       {
-        title: 'The Shawshank Redemption',
-        year: 1994,
-        director: 'Frank Darabont',
-        duration: '2h 22min',
-        genre: ['Crime', 'Drama'],
-        score: 9.3
+        title: 'The Great Dictator',
+        year: 1940,
+        director: 'Charles Chaplin',
+        duration: '2h 5min',
+        genre: ['Comedy', 'Drama', 'War'],
+        score: 8.5
       },
       {
-        title: 'The Godfather',
-        year: 1972,
-        director: 'Francis Ford Coppola',
-        duration: '2h 55min',
-        genre: ['Crime', 'Drama'],
-        score: 9.2
+        title:
+          'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
+        year: 1964,
+        director: 'Stanley Kubrick',
+        duration: '1h 35min',
+        genre: ['Comedy'],
+        score: 8.5
       },
       {
-        title: 'The Godfather: Part II',
-        year: 1974,
-        director: 'Francis Ford Coppola',
-        duration: '3h 22min',
-        genre: ['Crime', 'Drama'],
-        score: 9
+        title: 'Le fabuleux destin d"Amélie Poulain',
+        year: 2001,
+        director: 'Jean-Pierre Jeunet',
+        duration: '2h 2min',
+        genre: ['Comedy', 'Romance'],
+        score: 8.4
       }
-    ], 'Drama')).toBe(9.17);
+    ], 'Comedy')).toBe(8.47);
   });
 });
 
